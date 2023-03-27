@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--============== BOX ICONS ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!--============== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!--============== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>TravelFeet</title>
+  </head>
+  <body>
+    <!--============== HEADER ==========-->
+    <header class="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo"
+          ><img
+            class="nav__logoImg"
+            src="assets/img/logo-white.png"
+            alt="travelfeet-logo"
+        /></a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Cafe</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Stays</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Things To Do</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Facilities</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav__menu-1">
+          <ul class="nav__list-1">
+            <li class="nav__item-1">
+              <a href="" class="nav__link-1"><i class="bx bxl-twitter"></i></a>
+            </li>
+            <li class="nav__item-1">
+              <a href="" class="nav__link-1"
+                ><i class="bx bxl-facebook-circle"></i
+              ></a>
+            </li>
+            <li class="nav__item-1">
+              <a href="" class="nav__link-1"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+            </li>
+            <li class="nav__item-1">
+              <a href="" class="nav__button">Reservation</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--============== MAIN ==========-->
+    <main class="main">
+      <div class="swiper gallery-top">
+        <div class="swiper-wrapper">
+          <!--============== cottage-1 ==========-->
+          <section class="cottage swiper-slide">
+            <img
+              src="assets/img/cafe-3.jpg"
+              alt="iris-front"
+              class="cottage-bg"
+            />
+            <div class="cottage__container bd-container">
+              <div class="cottage__data">
+                <h2 class="cottage__subtitle">WELCOME TO</h2>
+                <h1 class="cottage__title">Iris Cottage and Cafe</h1>
+                <p class="cottage__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#" class="cottage__button">Check Availabilty</a>
+              </div>
+            </div>
+          </section>
+          <!--============== cottage-2 ==========-->
+          <section class="cottage swiper-slide">
+            <img
+              src="assets/img/foressta-1.jpg"
+              alt="iris-front"
+              class="cottage-bg"
+            />
+            <div class="cottage__container bd-container">
+              <div class="cottage__data">
+                <h2 class="cottage__subtitle">WELCOME TO</h2>
+                <h1 class="cottage__title">Harippur Cottage and Resort</h1>
+                <p class="cottage__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#" class="cottage__button">Check Availabilty</a>
+              </div>
+            </div>
+          </section>
+          <!--============== cottage-3 ==========-->
+          <section class="cottage swiper-slide">
+            <img
+              src="assets/img/cafe-side.webp"
+              alt="iris-front"
+              class="cottage-bg"
+            />
+            <div class="cottage__container bd-container">
+              <div class="cottage__data">
+                <h2 class="cottage__subtitle">WELCOME TO</h2>
+                <h1 class="cottage__title">Foressta - Boutique Luxury Villa</h1>
+                <p class="cottage__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#" class="cottage__button">Check Availabilty</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!--============== Controls ==========-->
+      <div class="controls gallery-thumbs">
+        <div class="controls__container swiper-wrapper">
+          <img
+            src="assets/img/cafe-3.jpg"
+            alt=""
+            class="controls__img swiper-slide"
+          />
+          <img
+            src="assets/img/foressta-1.jpg"
+            alt=""
+            class="controls__img swiper-slide"
+          />
+          <img
+            src="assets/img/cafe-side.webp"
+            alt=""
+            class="controls__img swiper-slide"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!--============== GSAP ==========-->
+    <script src="assets/js/gsap.min.js"></script>
+
+    <!--============== SWIPER JS ==========-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--============== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
