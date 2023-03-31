@@ -1,3 +1,4 @@
+"use strict";
 /*================ SHOW MENU ====================*/
 
 const showMenu = (toggleId, navId) => {
@@ -60,3 +61,112 @@ function ScrollAnimation() {
   });
 }
 controlImg.forEach((c) => c.addEventListener("click", ScrollAnimation));
+
+/*================ Dynamic Data ====================*/
+const timer = function (inputClass, time) {
+  const nums = document.querySelector(inputClass);
+
+  nums.innerText = "0";
+  const updateNum = () => {
+    const target = nums.getAttribute("data-target");
+    const count = +nums.innerText;
+    const increment = target / 350;
+    if (count < target) {
+      nums.innerText = `${Math.ceil(count + increment)}`;
+      setTimeout(updateNum, time);
+    } else nums.innerText = target;
+  };
+
+  updateNum();
+};
+
+/*=================== Intersection observer ==================*/
+
+const countingNum = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+  timer(".numbers-1", 250);
+  timer(".numbers-2", 1);
+  timer(".numbers-3", 45);
+  timer(".numbers-4", 0.1);
+
+  observer.unobserve(entry.target);
+};
+
+const section_1 = document.querySelector(".nearby");
+const observer = new IntersectionObserver(countingNum, {
+  root: null,
+  threshold: 0.85,
+});
+
+observer.observe(section_1);
+
+/*================== Insert Element for places======================*/
+
+// const placesContainer_2 = document.querySelector(".placeContent__container_2");
+const places_title_1 = [
+  {
+    name: "Hidimba Devi Temple",
+    description:
+      "Ornare accumsan congue nunc id facilisis tincidunt ridiculus congue consequat ultrices in mollis netus pellentesque lectus.",
+  },
+  {
+    name: "Mall Road",
+    description:
+      "Augue donec sit vestibulum amet luctus cras sagittis, ac rutrum tincidunt accumsan at posuere urna.",
+  },
+  {
+    name: "Rohtang Pass",
+    description:
+      "Suspendisse at sodales morbi urna, ut diam dignissim ante tellus vitae venenatis maecenas nullam pretium mattis.",
+  },
+];
+const places_title_2 = [
+  {
+    name: "Old Manali",
+    description:
+      "Placerat vel laoreet purus, mattis id neque convallis nunc, tincidunt massa at.",
+  },
+  {
+    name: "Jogini Waterfalls",
+    description:
+      "Risus facilisis porttitor lacus venenatis felis scelerisque lorem ut cras mi venenatis viverra diam sed dui.",
+  },
+  {
+    name: "Hampta Pass",
+    description:
+      "Neque ut et velit dictum molestie at pellentesque aliquet magna ut tincidunt ullamcorper mauris mi et.",
+  },
+];
+console.log(places_title_1, places_title_2);
+const displayPlaces = function (places, f_num) {
+  const placesContainer = document.querySelector(
+    `.placeContent__container_${f_num}`
+  );
+  places.forEach((place, i) => {
+    const html = `
+<div class="individual__place__container_${i + 1}">
+<div class="placeItem__container">
+  <div class="img_container">
+    <img src="assets/img/places-${f_num}/place-img-${i}.jpg" alt="image${i}" class="place__img" />
+  </div>
+  <div class="place__title">
+    <h2 class="place_titleText">${place.name}</h2>
+  </div>
+  <div class="place__description">
+    <p class="place__descriptionText">${place.description}</p>
+  </div>
+  <div class="place__button">
+    <a href="#" class="place__link">Learn More <span class="arrow-right"
+    ><i class="fa-solid fa-arrow-right-long"></i
+  ></span></a>
+  </div>
+  </div>
+</div>`;
+    placesContainer.insertAdjacentHTML("beforeend", html);
+  });
+};
+
+displayPlaces(places_title_1, 1);
+displayPlaces(places_title_2, 2);
