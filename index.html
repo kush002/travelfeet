@@ -100,12 +100,13 @@
       <article class="backgroundImg__filter">
         <!--================ Landing page ===============-->
         
-       <section class="landingPage  ">       
-        <img
-        src="assets/img/cafe-3.jpg"
+       <section class="landingPage" id="section_0">       
+        <!-- <img
+        src="assets/img/foressta.jpg"
         alt="iris-front"
         class="cottage-bg"
-        /> 
+        />  -->
+        <div class="landingPage__backgrounf__overlay"></div>
         <div class="cottage bd-container  ">         
           <div class="cottage__content__container">
             <div class="cottage__data">
@@ -114,7 +115,7 @@
               </div>
               <div class="title__container">
                 <h1 class="cottage__title">
-                  Iris Cottage and Cafe
+                  Foressta - A Luxury Boutique Villa
                 </h1>
               </div>
               <div class="description__container">
@@ -180,7 +181,7 @@
           </section> 
 
           <!-- ===================  DATA ================-->
-          <section class="data">
+          <section class="data" id="#show__data">
             <div class="data__container">
               <div class="data__item data_bottomPad">
                 <div class="data__info">
@@ -243,15 +244,8 @@
           </div>
           <div class="map__container">
             <div class="map__canvas">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13496.544975883064!2d77.1897015!3d32.2544163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390487f9e6eddf69%3A0xc0540f98dba58f7a!2sIris%20Cottage%20%26%20Cafe%20-%20Manali!5e0!3m2!1sen!2sin!4v1680161372006!5m2!1sen!2sin"
-                width="100%"
-                height="400"
-                style="border: none"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13511.64119939158!2d77.1774418!3d32.1527192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39048b00786cc6f3%3A0xa48d92eba47f0f75!2sForessta%20-%20a%20Luxury%20Boutique%20Villa!5e0!3m2!1sen!2sin!4v1680814028518!5m2!1sen!2sin" width="100%" height="450" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
             </div>
           </div>
         </div>
@@ -330,7 +324,7 @@
                   
                 </div>
                 <div class="icon__box">
-                  <h5 class="icon__box__title">Bicycle Renta</h5>
+                  <h5 class="icon__box__title">Bicycle Rental</h5>
                 </div>
               </div>
               <div class="column__item left__pad">
@@ -358,23 +352,279 @@
               <a href="#" class="seeAll-link">See All</a>
             </div>
           </section>
-          <section class="place__content_1">
-            <div class="placeContent__container_1"></div>
+          <section class="places-1__content_1">
+            <div class="places-1"></div>
           </section>
-          <section class="place__content_2">
-            <div class="placeContent__container_2"></div>
+          <section class="places-2__content_2">
+            <div class="places-2"></div>
           </section>
         </div>
       </section>
-    </main>
+
+      <!--================ Offers===============-->
+
+      <section class="offers" id="section_5">
+        <div class="offers__container bd-container">
+          <section class="offers__heading">
+            <div class="offers__title">
+              <h2 class="OffersTitle__text">Special Offers</h2>
+            </div>
+            <div class="viewAll-button">
+              <a href="#" class="viewAll-link">View All Offers</a>
+            </div>
+          </section>
+          <section class="offers__content">
+            <div class="offers-1"></div>
+          </section>
+        </div>
+      </section>
+
+      <!--================ Guest Rating Tab ===============-->
+      <section class="reviews" id="section_6">
+        <div class="review__container bd-container">
+          <div class="left__column">
+            <div class="left__column__wrapper">
+              <div class="review__title">
+                <div class="riviewTitle__container">
+                  <h2 class="review__text">What Our Guests Say</h2>
+                </div>
+              </div>
+              <div class="review__description">
+                <div class="riviewDesc__container">
+                  <p class="reviewDesc__text">Delivering an exceptional guest experience is a top priority for us ut tincidunt ullamcorper mauris mi et. </p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="right__column">
+            <div class="right__column__wrapper">
+              <div class="overall__rating">
+                <div class="rating_wrapper">
+                  <div class="ratingPad">
+                    <div class="main__rating">4.7</div>
+                  <div class="outOf__rating">Out of 5</div>
+                  <div class="ratingStar">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  </div>
+                  
+                </div>
+                <div class="ratingPlatforms">
+                  <div class="divider">
+                    <ul class="platformsWrapper">
+                      <li class="singlePlatform__wrapper">
+                        <span class="platformIcon"><i class="fa-brands fa-google"></i></span>
+                        <spaan class="ratingsData">457 Ratings</spaan>
+                      </li>
+                      <li class="singlePlatform__wrapper">
+                        <span class="platformIcon"><i class="fa-brands fa-airbnb"></i></span>
+                        <spaan class="ratingsData">372 Ratings</spaan>
+                      </li>
+                      <li class="singlePlatform__wrapper">
+                        <span class="platformIcon"><i class="fa-brands fa-facebook"></i></span>
+                        <spaan class="ratingsData">813 Likes</spaan>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+
+      <!--================ Hotel Info ===============-->
+
+      <section class="hotelInfo" id="section_7">
+        <div class="hotelInfo__container bd-container">
+          <div class="hotel__title">
+            <h2 class="hotel__text">Hotel Information</h2>
+          </div>
+          <section class="hotelInfo__data">
+            <div class="hotelData__container">
+              <div class="hotelData__wrapper"></div>
+              
+            </div>
+            <div class="hotelData-1__container"></div>
+            <div class="hotelData-2__container"></div>
+            <div class="hotelData-3__container"></div>
+          </section>
+        </div>
+      </section>
+
+      <!--================ Gallery ===============-->
+
+      <section class="gallery" id="section_8">
+        <div class="gallery__container bd-container">
+          <div class="gallery__title">
+            <h2 class="gallery__text">Gallery</h2>
+          </div>
+          <section class="gallery__data">
+            <div class="galleryData__container">
+              <div class="galleryData__wrapper">
+                <div class="image__container__1">
+                  <div class="image__wrapper__1">
+                    
+                  </div>
+                </div>
+                <div class="image__container__2">
+                  <div class="image__wrapper__2">
+                    
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+          <section class="gallery__data">
+            <div class="galleryData__container">
+              <div class="galleryData__wrapper">
+                <div class="image__container__3">
+                  <div class="image__wrapper__3">
+                    
+                  </div>
+                </div>
+                <div class="image__container__4">
+                  <div class="image__wrapper__4">
+                    
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+        </div>
+      </section>
+
       </article>    
     </main>
 
-    <!--============== GSAP ==========-->
-    <script src="assets/js/gsap.min.js"></script>
+    <!--================ pre-footer ===============-->
 
-    <!--============== SWIPER JS ==========-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <div class="pre__footter__booking__info">
+      <section class="extra__perks">
+        <div class="extraperks__background__overlay"></div>
+        <div class="extra__perk__container bd-container">
+          
+          <div class="perks__content">
+            <div class="perksSub__container">
+              <div class="perkSub">
+                <h6 class="perksSub__text">HOTEL RESERVATION</h6>
+              </div>
+            </div>
+            <div class="perksTitle__container">
+              <div class="perksTitle">
+                <h2 class="perksTitle__text">Extra Perks When You Book Directly With Us</h2>
+              </div>
+            </div>
+            <div class="perksNum__container">
+              <div class="perksNum">
+                <h6 class="perksNum__text">CALL US NOW:</h6>
+              </div>
+            </div>
+            <div class="perksContact__container">
+              <div class="perksContact">
+                <span class="perksContact___icon"><i class="fa-solid fa-phone-flip"></i></span>
+                <span class="perksContact__text"> +91-941 886 8222</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      
+      </section>
+    </div>
+
+    <!--================ footer ===============-->
+
+
+   <footer class="site__footer">
+    <div class="footer__wrapper">
+      <div class="footerInfo__container bd-container">
+        <div class="footerInfo__innerWrap">
+          <div class="footer__section-1">
+            <div class="footer__setion-1__content">
+              <div class="footer__logoImg">
+                <img class="img__footer" src="/assets/img/logo-black-footer.png" alt="">
+              </div>
+              <p class="footer__section-1__text">Rhoncus blandit mollis vulputate tellus, quam enim urna neque, eu varius aliquam id quisque eget at lorem tellus ac tincidunt.</p>
+            </div>
+            <div class="social__link__container">
+              <a href="#" class="instagram__link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="airbnb__link"><i class="fa-brands fa-airbnb"></i></a>
+              <a href="#" class="facebook__link"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="twitter__link"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer__section-2">
+            <aside class="section-2__footer__content">
+              <setion class="footer__menu-1">
+                <h2 class="footer__menu-1__title">Hotel</h2>
+              <nav class="footer__menu-1__container">
+                <ul class="footerMenu-1__list">
+                  <li class="footerMenu-1__item"><a href="#" class="menu-1__link">About Us</a></li>
+                  <li class="footerMenu-1__item"><a href="#" class="menu-1__link">Reviews</a></li>
+                  <li class="footerMenu-1__item"><a href="#" class="menu-1__link">Directions</a></li>
+                  <li class="footerMenu-1__item"><a href="#" class="menu-1__link">News</a></li>
+                  <li class="footerMenu-1__item"><a href="#" class="menu-1__link">Contact Us</a></li>
+                </ul>
+              </nav>
+              </setion>
+              
+            </aside>
+          </div>
+          <div class="footer__section-3">
+            <aside class="section-3__footer__content">
+              <setion class="footer__menu-2">
+                <h2 class="footer__menu-2__title">Customer Help</h2>
+              <nav class="footer__menu-2__container">
+                <ul class="footerMenu-2__list">
+                  <li class="footerMenu-2__item"><a href="#" class="menu-2__link">Customer Support</a></li>
+                  <li class="footerMenu-2__item"><a href="#" class="menu-2__link">Guest Feedback</a></li>
+                  <li class="footerMenu-2__item"><a href="#" class="menu-2__link">Sitemap</a></li>
+                  <li class="footerMenu-2__item"><a href="#" class="menu-2__link">Responsible Disclosure</a></li>
+                  <li class="footerMenu-2__item"><a href="#" class="menu-2__link">FAQs</a></li>
+                </ul>
+              </nav>
+              </setion>
+              
+            </aside>
+          </div>
+          <div class="footer__section-4">
+            <aside class="section-4__footer__content">
+              <setion class="footer__address__container">
+                <h2 class="footer__address__title">Contact</h2>
+                <div class="address__text__container">
+                  <p class="address__text">
+                    Foressta – a Luxury Boutique Villa
+                    <br>
+                    Naggar Road, vpo – Mansari (Haripur), Manali,
+                    <br>
+                    Himachal Pradesh - 175136
+                    <br>
+                    +91-941 886 8222
+                  </p>
+                </div>
+              </setion>
+              
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright__wrapper">
+      <div class="copyright__content bd-container">
+        <p>Copyright © 2023 TravelFeet | Powered by TravelFeet</p>
+      </div>
+    </div>
+  
+   </footer>
 
     <!--============== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>
