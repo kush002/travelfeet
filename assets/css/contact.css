@@ -1,0 +1,353 @@
+/*========= Google Fonts =======*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Work+Sans:wght@300&display=swap");
+
+/*======= VARIABLES CSS ========*/
+
+:root {
+  --header-height: 6rem;
+
+  /*======= COLORS ========*/
+
+  --first-color: #26a69a;
+  --first-color-lighter: #ecf3f2;
+  --title-color: #11443f;
+  --text-color: #586261;
+  --body-color: #faf4ed;
+
+  /*======= Font and Typography ========*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 5rem;
+  --sub-font-size: 0.882rem;
+  --normal-font-size: 1rem;
+  --big-font-size: 42px;
+
+  /*======= Font Weight ========*/
+  --font-medium: 500;
+  --font-semi-bold: 500;
+
+  /*======= z index ========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (max-width: 921px) {
+  :root {
+    --biggest-font-size: 4rem;
+    /* --sub-font-size: 0.88rem; */
+    --normal-font-size: 0.941rem;
+    --big-font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --sub-font-size: 0.823rem;
+    --normal-font-size: 0.882rem;
+    --big-font-size: 30px;
+  }
+}
+
+/*======= BASE ========*/
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.85714285714286;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  line-height: 1.6;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ====================  Get In touch ==============*/
+.contactUs__main__container,
+.contactUs__location__container {
+  width: 50%;
+}
+
+.contactUs__details__wrapper {
+  padding: 0 96px 0 0;
+}
+
+.contactUs__title,
+.contactUs__description,
+.form__title,
+.form__description {
+  margin-bottom: 20px;
+}
+.contactUs__title__text,
+.form__title__text,
+.form__title__text_1 {
+  line-height: 1.25em;
+  color: var(--title-color);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-medium);
+  font-family: var(--body-font);
+}
+.form__title__text_1 {
+  text-align: center;
+}
+
+.contactUs__description__text,
+.form__description__text,
+.form__description__text__1 {
+  padding-bottom: 20px;
+  font-size: var(--normal-font-size);
+}
+.form__description__text__1 {
+  text-align: center;
+  font-weight: var(--font-medium);
+}
+
+.contactUs__container {
+  margin-bottom: 20px;
+}
+.contactUs__wrapper {
+  padding: 0 0 8px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+.contactUs__icon {
+  margin-right: 15px;
+  margin-left: 0;
+  margin-bottom: unset;
+  font-size: 22px;
+  display: flex;
+  align-items: flex-start;
+  color: #4d34dd;
+}
+.contactUs__text {
+  line-height: 1.3em;
+  font-size: 22px;
+  font-weight: var(--font-medium);
+  font-family: var(--body-font);
+  color: var(--title-color);
+}
+.contactUs__map__canvas {
+  margin-bottom: 32px;
+  line-height: 0;
+}
+
+.location__contactUs__buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.location__contactPage__button {
+  display: inline-block;
+
+  padding: 15px 23px;
+  border: solid 1px var(--first-color);
+  color: var(--first-color);
+  border-radius: 6px;
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+  line-height: 1em;
+  transition: all 0.3s;
+}
+
+.location__contactPage__icon {
+  margin-right: 16px;
+}
+.location__contactPage__button:hover {
+  /* background-color: transparent; */
+
+  color: var(--first-color-lighter);
+  background-color: var(--first-color);
+}
+
+.query__form {
+  padding: 104px 40px;
+}
+
+.form__container,
+.formSubmission__container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.form__title {
+  width: 100%;
+}
+.form__description_1 {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.form__description__wrapper {
+  padding: 0 48px 0 0;
+}
+
+.userInput__container {
+  width: 100%;
+}
+
+.userInput__wrapper {
+  margin-bottom: 26px;
+}
+
+.form__name,
+.form__email,
+.form__subject,
+.form__message {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.firstName__wrapper {
+  width: calc(50% - 10px);
+}
+.lastName__wrapper {
+  width: calc(50% - 10px);
+}
+
+.email__wrapper,
+.subject__wrapper,
+.message_wrapper {
+  width: 100%;
+}
+
+label,
+input,
+textarea {
+  display: block;
+}
+label {
+  font-weight: 800;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75em;
+  font-size: 1rem;
+  line-height: 1.6em;
+  border: solid 1px #d1d6d6;
+  border-radius: 2px;
+}
+.send__message__buttonContainer {
+  padding: 10px 0 0 0;
+}
+
+.inactive__submit__button {
+  display: inline-block;
+  font-family: var(--body-font);
+  padding: 15px 23px;
+  border: solid 1px #d2d9d8;
+  color: #e0e9e8;
+  border-radius: 6px;
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+  line-height: 1em;
+  background-color: #d2d9d8;
+  transition: all 0.3s;
+}
+
+.submit__button {
+  display: inline-block;
+  font-family: var(--body-font);
+  padding: 15px 23px;
+  border: solid 1px var(--first-color);
+  color: var(--first-color);
+  border-radius: 6px;
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+  line-height: 1em;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.submit__button:hover {
+  background-color: var(--first-color);
+  color: var(--first-color-lighter);
+}
+
+.afterSubmission {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .contactUs__details__wrapper {
+    padding: 0 40px 0 0;
+  }
+  .contactUs__wrapper {
+    padding: 0;
+  }
+  .query__form {
+    padding: 80px 40px;
+  }
+}
+
+@media screen and (max-width: 921px) {
+  .contactUs__text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pageDetails__container {
+    padding: 64px 0;
+  }
+  .query__form {
+    padding: 64px 24px;
+  }
+  .contactUs__main__container,
+  .contactUs__location__container {
+    width: 100%;
+  }
+  .contactUs__details__wrapper {
+    padding: 0 24px 48px;
+  }
+
+  .contactUs__wrapper {
+    display: block;
+    padding: 0 0 4px;
+  }
+  .contactUs__icon {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .location__contactPage__button,
+  .submit__button,
+  .inactive__submit__button {
+    padding: 13px 21px;
+  }
+}

@@ -1,0 +1,236 @@
+/*========= Google Fonts =======*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Work+Sans:wght@300&display=swap");
+
+/*======= VARIABLES CSS ========*/
+
+:root {
+  --header-height: 6rem;
+
+  /*======= COLORS ========*/
+
+  --first-color: #26a69a;
+  --first-color-lighter: #ecf3f2;
+  --title-color: #11443f;
+  --text-color: #586261;
+  --body-color: #faf4ed;
+
+  /*======= Font and Typography ========*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 5rem;
+  --sub-font-size: 0.882rem;
+  --normal-font-size: 1rem;
+  --big-font-size: 42px;
+
+  /*======= Font Weight ========*/
+  --font-medium: 500;
+  --font-semi-bold: 500;
+
+  /*======= z index ========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (max-width: 921px) {
+  :root {
+    --biggest-font-size: 4rem;
+    /* --sub-font-size: 0.88rem; */
+    --normal-font-size: 0.941rem;
+    --big-font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --sub-font-size: 0.823rem;
+    --normal-font-size: 0.882rem;
+    --big-font-size: 30px;
+  }
+}
+
+/*======= BASE ========*/
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.85714285714286;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  line-height: 1.6;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=======================facilities =====================*/
+
+.facilitiesPage {
+  padding: 104px 40px;
+}
+.facilitiesPage__container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.facilitiesPage__title {
+  padding: 0% 28%;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.facilitiesPage__text {
+  font-family: var(--body-font);
+  font-size: var(--big-font-size);
+  line-height: 1.25em;
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  text-align: center;
+}
+
+.facilitiesPage__description {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.facilities__wrapper {
+  text-align: center;
+  padding: 0% 24%;
+  line-height: 1.857;
+}
+
+.facilitiesPage__descriptionText {
+  padding-bottom: 1em;
+}
+
+.facilitis__Row-1 {
+  margin-top: 24px;
+  width: 100%;
+}
+.facilitis__Row-3,
+.facilitis__Row-2 {
+  margin-top: 64px;
+  width: 100%;
+}
+.facilities__row-1__container,
+.facilities__row-2__container,
+.facilities__row-3__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.facilities__row__wrap-0,
+.facilities__row__wrap-1,
+.facilities__row__wrap-2 {
+  width: 33.333%;
+}
+.facilitiesPage__column__item {
+  text-align: center;
+}
+
+.right__padding {
+  padding: 0 32px 0 0;
+}
+.mid__padding {
+  padding: 0 16px 0;
+}
+.left__padding {
+  padding: 0 0 0 32px;
+}
+
+.facilitiesPage__icon {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.facilitiesPage__icon__animation {
+  display: inline-block;
+  font-size: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  line-height: 1;
+  transition: all 0.3s;
+  text-align: center;
+  font-weight: 400;
+  color: var(--first-color);
+  margin-bottom: 8px;
+}
+.facilitiesPage__icon__box__title {
+  font-size: 24px;
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.elementor-icon-box-description {
+  font-size: var(--normal-font-size);
+}
+
+@media screen and (max-width: 1024px) {
+  .facilitiesPage__title {
+    padding: 0% 25%;
+  }
+  .facilities__wrapper {
+    padding: 0 64px;
+  }
+}
+@media screen and (max-width: 921px) {
+  .facilitiesPage__icon__box__title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .facilitiesPage {
+    padding: 64px 24px;
+  }
+  .facilitiesPage__title,
+  .facilities__wrapper {
+    padding: 0;
+  }
+  .facilities__row__wrap-0,
+  .facilities__row__wrap-1,
+  .facilities__row__wrap-2 {
+    width: 100%;
+  }
+  .facilitis__Row-1,
+  .facilitiesPage__description {
+    margin: 0;
+  }
+  .facilitiesPage__descriptionText {
+    padding-bottom: 10px;
+  }
+  .right__padding,
+  .left__padding,
+  .mid__padding {
+    padding: 48px 0 0 0;
+  }
+  .facilitis__Row-2,
+  .facilitis__Row-3 {
+    margin-top: 0;
+  }
+}

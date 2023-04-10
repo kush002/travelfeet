@@ -1,4 +1,5 @@
 "use strict";
+
 /*================ SHOW MENU ====================*/
 
 const showMenu = (toggleId, navId) => {
@@ -7,61 +8,12 @@ const showMenu = (toggleId, navId) => {
 
   if (true) {
     toggle.addEventListener("click", function () {
-      console.log("clicked");
       nav.classList.toggle("show-menu");
     });
   }
 };
 
 showMenu("nav-toggle", "nav-menu");
-
-// /*================ SWIPER JS ====================*/
-
-// let galleryThumbs = new Swiper(".gallery-thumbs", {
-//   spaceBetween: 0,
-//   slidesPerView: 0,
-// });
-
-// let galleryTop = new Swiper(".gallery-top", {
-//   effect: "fade",
-//   loop: true,
-
-//   thumbs: {
-//     swiper: galleryThumbs,
-//   },
-// });
-
-// /*================ GSAP ANIMATION ====================*/
-
-// const controlImg = document.querySelectorAll(".controls__img");
-
-// function ScrollAnimation() {
-//   gsap.from(".cottage__subtitle", {
-//     opacity: 0,
-//     duration: 0.2,
-//     delay: 0.2,
-//     y: -20,
-//   });
-//   gsap.from(".cottage__title", {
-//     opacity: 0,
-//     duration: 0.3,
-//     delay: 0.3,
-//     y: -20,
-//   });
-//   gsap.from(".cottage__description", {
-//     opacity: 0,
-//     duration: 0.4,
-//     delay: 0.4,
-//     y: -20,
-//   });
-//   gsap.from(".cottage__button", {
-//     opacity: 0,
-//     duration: 0.5,
-//     delay: 0.5,
-//     y: -20,
-//   });
-// }
-// controlImg.forEach((c) => c.addEventListener("click", ScrollAnimation));
 
 /*================ Dynamic Data ====================*/
 const timer = function (inputClass, time) {
@@ -85,7 +37,6 @@ const timer = function (inputClass, time) {
 
 const countingNum = function (entries) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) return;
   setTimeout(() => {
@@ -106,8 +57,9 @@ const observer = new IntersectionObserver(countingNum, {
   root: null,
   threshold: thresholdValue,
 });
-
-observer.observe(section_1);
+if (section_1) {
+  observer.observe(section_1);
+}
 
 /*================== Insert Element for places======================*/
 
@@ -171,7 +123,7 @@ const displaySection = function (cardName, f_name) {
   </div>
   </div>
 </div>`;
-    placesContainer.insertAdjacentHTML("beforeend", html);
+    if (placesContainer) placesContainer.insertAdjacentHTML("beforeend", html);
   });
 };
 
@@ -263,7 +215,7 @@ const displayReview = function (data, f_name, className) {
           </div>
         </section>
           `;
-    reviewContainer.insertAdjacentHTML("beforeend", html);
+    if (reviewContainer) reviewContainer.insertAdjacentHTML("beforeend", html);
   });
 };
 displayReview(reviewData.slice(0, 2), "guest-face");
@@ -330,7 +282,7 @@ const displayInfo = function (data) {
     </div>
   `;
 
-    container.insertAdjacentHTML("beforeend", html);
+    if (container) container.insertAdjacentHTML("beforeend", html);
   });
 };
 
@@ -355,9 +307,160 @@ const displayImage = function (data) {
     <img class="main__gallery__image" src="assets/img/${info.f_name}/img-${info.image}.jpg" alt="img-${info.image}"/>
     </div>
     `;
-    container.insertAdjacentHTML("beforeend", html);
+    if (container) container.insertAdjacentHTML("beforeend", html);
   });
 };
 
 displayImage(imageData.slice(0, 3));
 displayImage(imageData.slice(3));
+/*============================== Facilities page containers===================*/
+
+const facilities_content = [
+  {
+    icon: '<i class="fa-solid fa-wifi"></i>',
+    title: "Free Wi-Fi",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-1__container",
+    padClass: "right__padding",
+  },
+  {
+    icon: '<i class="fa-solid fa-ban-smoking"></i>',
+    title: "Smoke-Free",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-1__container",
+    padClass: "mid__padding",
+  },
+  {
+    icon: '<i class="fa-solid fa-square-parking"></i>',
+    title: "Free Parking",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-1__container",
+    padClass: "left__padding",
+  },
+  {
+    icon: '<i class="fa-solid fa-dog"></i>',
+    title: "Pet Friendly",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-2__container",
+    padClass: "right__padding",
+  },
+  {
+    icon: '<i class="fa-solid fa-bread-slice"></i>',
+    title: "Free Breakfast",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-2__container",
+    padClass: "mid__padding",
+  },
+  {
+    icon: '<i class="fa-solid fa-dumbbell"></i>',
+    title: "Fitness Center",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-2__container",
+    padClass: "left__padding",
+  },
+  {
+    icon: '<i class="fa-solid fa-tv"></i>',
+    title: "Plasma TV",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-3__container",
+    padClass: "right__padding",
+  },
+  {
+    icon: '<i class="fa-solid fa-mug-hot"></i>',
+    title: "Cafe",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-3__container",
+    padClass: "mid__padding",
+  },
+  {
+    icon: '<i class="fa-solid fa-martini-glass"></i>',
+    title: "Mini Bar",
+    description:
+      "Magna sagittis faucibus mauris, sit enim varius sem ultricies sed netus tortor tortor fusce.",
+    id: "facilities__row-3__container",
+    padClass: "left__padding",
+  },
+];
+
+const display_facilities = function (data) {
+  data.forEach((info, i) => {
+    const container = document.querySelector(`.${info.id}`);
+    const html = `
+    <div class="facilities__row__wrap-${i}">
+    <div class="facilitiesPage__column__item ${info.padClass}">
+      <div class="facilitiesPage__icon"> <span class="facilitiesPage__icon__animation">${info.icon}</span>
+        
+      </div>
+      <div class="facilitiesPage__icon__box">
+        <h5 class="facilitiesPage__icon__box__title">${info.title}</h5>
+        <p class="facilitiesPage__icon__box__description">${info.description}</p>
+      </div>
+    </div>
+  </div>
+   `;
+    if (container) container.insertAdjacentHTML("beforeend", html);
+  });
+};
+
+display_facilities(facilities_content.slice(0, 3));
+display_facilities(facilities_content.slice(3, 6));
+display_facilities(facilities_content.slice(6));
+
+/*============================== Send Email===================*/
+
+const button = document.getElementById("submit__btn");
+if (button) button.disabled = true;
+const success = function () {
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const inputEmail = document.getElementById("inputEmail").value;
+  const inputSubject = document.getElementById("inputSubject").value;
+  const inputMessage = document.getElementById("inputMessage").value;
+
+  if ((firstName, lastName, inputEmail, inputSubject, inputMessage === "")) {
+    button.disabled = true;
+  } else {
+    button.disabled = false;
+    button.classList.add("submit__button");
+    button.classList.remove("inactive__submit__button");
+  }
+};
+
+function sendMail() {
+  const formContainer = document.querySelector(".form__container");
+  const formSubContainer = document.querySelector(".formSubmission__container");
+
+  const param = {
+    firstName: document.getElementById("firstName").value,
+    lastName: document.getElementById("lastName").value,
+    inputEmail: document.getElementById("inputEmail").value,
+    inputSubject: document.getElementById("inputSubject").value,
+    inputMessage: document.getElementById("inputMessage").value,
+  };
+
+  const serviceID = "service_6rptheo";
+  const templateID = "template_43tre8q";
+
+  emailjs
+    .send(serviceID, templateID, param)
+    .then((res) => {
+      document.getElementById("firstName").value = "";
+      document.getElementById("lastName").value = "";
+      document.getElementById("inputEmail").value = "";
+      document.getElementById("inputSubject").value = "";
+      document.getElementById("inputMessage").value = "";
+
+      // alert("message sent successfully");
+      formContainer.classList.add("afterSubmission");
+      formSubContainer.classList.remove("afterSubmission");
+    })
+    .catch((err) => console.log(err));
+}

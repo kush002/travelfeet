@@ -5,11 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--============== BOX ICONS ==========-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
+   <!--===================Tailwind=========================-->
+   <link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+  rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+<script src="https://cdn.tailwindcss.com/3.2.4"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        body: ["Roboto", "sans-serif"],
+        mono: ["ui-monospace", "monospace"],
+      },
+    },
+    corePlugins: {
+      preflight: false,
+    },
+  };
+</script>
 
     <!--===============font awesom==========-->
     <link
@@ -19,8 +37,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--============== SWIPER CSS ==========-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
     <!--============== CSS ==========-->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -35,7 +51,7 @@
           <div class="nav__menu" >
             <div class="logo__container">
               <div class="logo">
-                <a href="#" class="nav__logo"
+                <a href="/index.html" class="nav__logo"
                   ><img
                     class="nav__logoImg"
                     src="assets/img/logo-white.png"
@@ -46,22 +62,31 @@
             <div class="menu__builder" id="nav-menu">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Home</a>
+                  <a href="/index.html" class="nav__link">Home</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Cafe</a>
+                  <a href="/cafe.html" class="nav__link">Cafe</a>
+                </li>
+                <li class="nav__item ">
+                  <a href="/stays.html" class="nav__link dropdown">Stays
+                    
+                    <div class="dropdown-content">
+                      <p>Hello World!</p>
+                      <p>Hello World!</p>
+                      <p>Hello World!</p>
+                      </div>
+                    
+                    
+                  </a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Stays</a>
+                  <a href="/things_to_do.html" class="nav__link">Things To Do</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Things To Do</a>
+                  <a href="/facilities.html" class="nav__link">Facilities</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Facilities</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link">Contact</a>
+                  <a href="/conact.html" class="nav__link">Contact</a>
                 </li>
               </ul>
             </div>
@@ -99,13 +124,49 @@
     <main class="main">
       <article class="backgroundImg__filter">
         <!--================ Landing page ===============-->
-        
-       <section class="landingPage" id="section_0">       
-        <!-- <img
-        src="assets/img/foressta.jpg"
-        alt="iris-front"
-        class="cottage-bg"
-        />  -->
+
+        <div
+  id="carouselExampleCrossfade"
+  class="relative"
+  data-te-carousel-init
+  data-te-carousel-slide>
+  <!--Carousel indicators-->
+  <div
+    class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+    data-te-carousel-indicators>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCrossfade"
+      data-te-slide-to="0"
+      data-te-carousel-active
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-current="true"
+      aria-label="Slide 1"></button>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCrossfade"
+      data-te-slide-to="1"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 2"></button>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCrossfade"
+      data-te-slide-to="2"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 3"></button>
+  </div>
+
+  <!--Carousel items-->
+  <div
+    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    <!--First item-->
+    <div
+      class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item
+      data-te-carousel-active>
+      <section class="landingPage landingPage__background__img-1" id="section_0">       
+       
         <div class="landingPage__backgrounf__overlay"></div>
         <div class="cottage bd-container  ">         
           <div class="cottage__content__container">
@@ -132,6 +193,130 @@
           </div>
         </div>      
       </section> 
+    </div>
+    <!--Second item-->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item>
+      <section class="landingPage landingPage__background__img-2" id="section_0">       
+       
+        <div class="landingPage__backgrounf__overlay"></div>
+        <div class="cottage bd-container  ">         
+          <div class="cottage__content__container">
+            <div class="cottage__data">
+              <div class="subtitle__container">
+                <h6 class="cottage__subtitle">WELCOME TO</h6>
+              </div>
+              <div class="title__container">
+                <h1 class="cottage__title">
+                  Iris Cottage and Cafe
+                </h1>
+              </div>
+              <div class="description__container">
+                <div class="descriptionSize__container">
+                  <p class="cottage__description">
+                    Gravida maecenas mi iaculis non, posuere mattis urna, ac risus sit porta nunc nibh dictum proin leo dolor sed bibendum mi vitae mattis ipsum, in odio vitae purus pellentesque integer at ac.
+                  </p>
+                </div>                
+              </div>
+              <div class="button__container">
+                <a href="#" class="cottage__button">Check Availabilty</a>
+              </div>
+            </div>
+          </div>
+        </div>      
+      </section> 
+    </div>
+    <!--Third item-->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item>
+      <section class="landingPage landingPage__background__img-3" id="section_0">       
+       
+        <div class="landingPage__backgrounf__overlay"></div>
+        <div class="cottage bd-container  ">         
+          <div class="cottage__content__container">
+            <div class="cottage__data">
+              <div class="subtitle__container">
+                <h6 class="cottage__subtitle">WELCOME TO</h6>
+              </div>
+              <div class="title__container">
+                <h1 class="cottage__title">
+                  Harippur Cottages and Resort
+                </h1>
+              </div>
+              <div class="description__container">
+                <div class="descriptionSize__container">
+                  <p class="cottage__description">
+                    Gravida maecenas mi iaculis non, posuere mattis urna, ac risus sit porta nunc nibh dictum proin leo dolor sed bibendum mi vitae mattis ipsum, in odio vitae purus pellentesque integer at ac.
+                  </p>
+                </div>                
+              </div>
+              <div class="button__container">
+                <a href="#" class="cottage__button">Check Availabilty</a>
+              </div>
+            </div>
+          </div>
+        </div>      
+      </section> 
+    </div>
+  </div>
+
+  <!--Carousel controls - prev item-->
+  <button
+    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselExampleCrossfade"
+    data-te-slide="prev">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Previous</span
+    >
+  </button>
+  <!--Carousel controls - next item-->
+  <button
+    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselExampleCrossfade"
+    data-te-slide="next">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Next</span
+    >
+  </button>
+</div>
+        <!--===========================================-->
+      
 
       <!--================ Nearby Loaction ===============-->
       <section class="nearby" id="section_1">
@@ -214,6 +399,43 @@
 
       <!--================ Map ===============-->
 
+      <div
+  id="carouselDarkVariant"
+  class="relative"
+  data-te-carousel-init
+  data-te-carousel-slide>
+  <!-- Carousel indicators -->
+  <div
+    class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+    data-te-carousel-indicators>
+    <button
+      data-te-target="#carouselDarkVariant"
+      data-te-slide-to="0"
+      data-te-carousel-active
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-current="true"
+      aria-label="Slide 1"></button>
+    <button
+      data-te-target="#carouselDarkVariant"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      data-te-slide-to="1"
+      aria-label="Slide 1"></button>
+    <button
+      data-te-target="#carouselDarkVariant"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      data-te-slide-to="2"
+      aria-label="Slide 1"></button>
+  </div>
+
+  <!-- Carousel items -->
+  <div
+    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    <!-- First item -->
+    <div
+      class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item
+      data-te-carousel-active>
       <section class="location" id="section_2">
         <div class="location__container bd-container">
           <div class="location__info">
@@ -250,7 +472,158 @@
           </div>
         </div>
       </section>
+      <div
+        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
+        <h5 class="text-xl">Forestta - a Luxury Boutique Villa</h5>
+      </div>
+    </div>
+    <!-- Second item -->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item>
+      <section class="location" id="section_2">
+        <div class="location__container bd-container">
+          <div class="location__info">
+             <div class="location__text">
+              <div class="location__title__container">
+                <div class="title__paddingContainer">
+                  <h1 class="location__textTitle">How to Reach</h1>
+                </div>
+                
+              </div>
+              <div class="location__description__container">
+                <div class="desPad__container">
+                  <p class="location__textDescription">
+                    Nibh tempor euismod nulla risus, elementum sed volutpat
+                  </p>
+                </div>
+                
+              </div>
+              
+            </div>
+            <div class="location__buttonContainer">
+              <a href="#" class="location__button"
+                ><span class="location__icon"
+                  ><i class="fa-solid fa-location-arrow"></i></span
+                >Get Directions</a
+              >
+            </div>
+          </div>
+          <div class="map__container">
+            <div class="map__canvas">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13496.544975883064!2d77.1897015!3d32.2544163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390487f9e6eddf69%3A0xc0540f98dba58f7a!2sIris%20Cottage%20%26%20Cafe%20-%20Manali!5e0!3m2!1sen!2sin!4v1681113640702!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
+        <h5 class="text-xl">Iris Cottage and Cafe</h5>
+      </div>
+    </div>
+    <!-- Third item -->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-fade
+      data-te-carousel-item>
+      <section class="location" id="section_2">
+        <div class="location__container bd-container">
+          <div class="location__info">
+             <div class="location__text">
+              <div class="location__title__container">
+                <div class="title__paddingContainer">
+                  <h1 class="location__textTitle">How to Reach</h1>
+                </div>
+                
+              </div>
+              <div class="location__description__container">
+                <div class="desPad__container">
+                  <p class="location__textDescription">
+                    Nibh tempor euismod nulla risus, elementum sed volutpat
+                  </p>
+                </div>
+                
+              </div>
+              
+            </div>
+            <div class="location__buttonContainer">
+              <a href="#" class="location__button"
+                ><span class="location__icon"
+                  ><i class="fa-solid fa-location-arrow"></i></span
+                >Get Directions</a
+              >
+            </div>
+          </div>
+          <div class="map__container">
+            <div class="map__canvas">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3378.091513625733!2d77.17123981546953!3d32.14782892310558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39048a1e01005d73%3A0x869973a62775efbc!2sHarippur%20Cottages%20and%20Resort%20(Manali)!5e0!3m2!1sen!2sin!4v1681113739165!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
+        <h5 class="text-xl">Harippur Cottages and Resort</h5>
+      </div>
+    </div>
+  </div>
 
+  <!-- Carousel controls - prev item-->
+  <button
+    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselDarkVariant"
+    data-te-slide="prev">
+    <span class="inline-block h-8 w-8 dark:grayscale">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Previous</span
+    >
+  </button>
+  <!-- Carousel controls - next item-->
+  <button
+    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselDarkVariant"
+    data-te-slide="next">
+    <span class="inline-block h-8 w-8 dark:grayscale">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Next</span
+    >
+  </button>
+</div>
+
+     
       <!--================ Facilities ===============-->
 
       <section class="facilities" id="section_3">
@@ -568,7 +941,7 @@
                 <h2 class="footer__menu-1__title">Hotel</h2>
               <nav class="footer__menu-1__container">
                 <ul class="footerMenu-1__list">
-                  <li class="footerMenu-1__item"><a href="#" class="menu-1__link">About Us</a></li>
+                  <li class="footerMenu-1__item"><a href="/index.html" class="menu-1__link">About Us</a></li>
                   <li class="footerMenu-1__item"><a href="#" class="menu-1__link">Reviews</a></li>
                   <li class="footerMenu-1__item"><a href="#" class="menu-1__link">Directions</a></li>
                   <li class="footerMenu-1__item"><a href="#" class="menu-1__link">News</a></li>
@@ -620,7 +993,7 @@
     </div>
     <div class="copyright__wrapper">
       <div class="copyright__content bd-container">
-        <p>Copyright © 2023 TravelFeet | Powered by TravelFeet</p>
+        <p>Copyright &copy; 2023 TravelFeet | Powered by TravelFeet</p>
       </div>
     </div>
   
@@ -628,5 +1001,6 @@
 
     <!--============== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>

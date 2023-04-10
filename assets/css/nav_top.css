@@ -1,0 +1,218 @@
+/*========= Google Fonts =======*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Work+Sans:wght@300&display=swap");
+
+/*======= VARIABLES CSS ========*/
+
+:root {
+  --header-height: 6rem;
+
+  /*======= COLORS ========*/
+
+  --first-color: #26a69a;
+  --first-color-lighter: #ecf3f2;
+  --title-color: #11443f;
+  --text-color: #586261;
+  --body-color: #faf4ed;
+
+  /*======= Font and Typography ========*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 5rem;
+  --sub-font-size: 0.882rem;
+  --big-font-size: 2.470rem
+  --normal-font-size: 1rem;
+
+  /*======= Font Weight ========*/
+  --font-medium: 500;
+  --font-semi-bold: 500;
+
+  /*======= z index ========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (max-width: 921px) {
+  :root {
+    --biggest-font-size: 4rem;
+    /* --sub-font-size: 0.88rem; */
+    --normal-font-size: 0.941rem;
+    --big-font-size: 34px
+  }
+}
+
+@media screen and (max-width: 544px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --sub-font-size: 0.823rem;
+    --normal-font-size: 0.882rem;
+    --big-font-size: 30px
+  }
+}
+
+/*======= BASE ========*/
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.85714285714286;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  line-height: 1.6;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.top__page__1 {
+  background-image: url(/assets/img/navImages/cafe-1.jpg);
+}
+.top__page__2 {
+  background-image: url(/assets/img/navImages/stays-1.jpg);
+}
+.top__page__3 {
+  background-image: url(/assets/img/navImages/things-to-do-1.jpg);
+}
+.top__page__4 {
+  background-image: url(/assets/img/navImages/facilities-1.jpg);
+}
+.top__page__5 {
+  background-image: url(/assets/img/navImages/contact-1.jpg);
+}
+.top__page__1,
+.top__page__2,
+.top__page__3,
+.top__page__4,
+.top__page__5 {
+  position: relative;
+  /* display: flex; */
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 200px 40px 80px;
+}
+.topPage__background__overlay {
+  background-color: transparent;
+  background-image: linear-gradient(98deg, #2208f9 0%, #a75f2d 100%);
+  opacity: 0.3;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.top__section-1__container {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.top__section-1__title {
+  width: 50%;
+}
+.top__section-1__description {
+  width: 50%;
+  display: flex;
+}
+
+.top__section-1__wrapper {
+  padding: 20px 96px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-content: flex-start;
+}
+.top_section-1__text {
+  color: #fff;
+  line-height: 1.4em;
+  font-size: 80px;
+  font-weight: 500;
+}
+.top__section-1__description__text {
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.pageDetails__container {
+  padding: 104px 40px;
+}
+.pageDetails__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .top__page__1,
+  .top__page__2,
+  .top__page__3,
+  .top__page__4,
+  .top__page__5 {
+    padding: 144px 40px 48px;
+  }
+  .top__section-1__wrapper {
+    padding: 16px 0 0;
+  }
+  .pageDetails__container{
+   padding:80px 40px;
+  }
+}
+
+@media screen and (max-width: 921px) {
+  .top_section-1__text {
+    font-size: 64px;
+  }
+  .top__section-1__description__text {
+    font-size: 0.941rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top__page__1,
+  .top__page__2,
+  .top__page__3,
+  .top__page__4,
+  .top__page__5 {
+    padding: 124px 24px 48px;
+  }
+  .top__section-1__title,
+  .top__section-1__description {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 544px) {
+  .top_section-1__text {
+    font-size: 48px;
+  }
+  .top__section-1__description__text {
+    font-size: 0.882rem;
+  }
+}
