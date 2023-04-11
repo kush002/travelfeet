@@ -385,7 +385,7 @@ a {
   padding: 40px 40px 0;
 }
 .landingPage__background__img-1 {
-  background-image: url(/assets/img/foressta.jpg);
+  background-image: url(/assets/img/foressta-lazy.jpg);
 }
 .landingPage__background__img-2 {
   background-image: url(/assets/img/iris-cotage.jpg);
