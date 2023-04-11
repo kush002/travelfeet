@@ -18,7 +18,7 @@
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 5rem;
   --sub-font-size: 0.882rem;
-  --big-font-size: 2.470rem
+  --big-font-size: 42px;
   --normal-font-size: 1rem;
 
   /*======= Font Weight ========*/
@@ -35,7 +35,7 @@
     --biggest-font-size: 4rem;
     /* --sub-font-size: 0.88rem; */
     --normal-font-size: 0.941rem;
-    --big-font-size: 34px
+    --big-font-size: 34px;
   }
 }
 
@@ -44,7 +44,7 @@
     --biggest-font-size: 3rem;
     --sub-font-size: 0.823rem;
     --normal-font-size: 0.882rem;
-    --big-font-size: 30px
+    --big-font-size: 30px;
   }
 }
 
@@ -181,8 +181,8 @@ a {
   .top__section-1__wrapper {
     padding: 16px 0 0;
   }
-  .pageDetails__container{
-   padding:80px 40px;
+  .pageDetails__container {
+    padding: 80px 40px;
   }
 }
 

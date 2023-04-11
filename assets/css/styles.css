@@ -662,7 +662,7 @@ a {
 
 .nearby__title {
   font-family: var(--body-font);
-  font-size: 2.47rem;
+  font-size: 42px;
   letter-spacing: -1px;
   line-height: 1.25em;
   font-weight: var(--font-medium);
@@ -835,7 +835,7 @@ a {
 }
 .location__textTitle {
   font-family: var(--body-font);
-  font-size: 2.47rem;
+  font-size: 42px;
   font-weight: var(--font-medium);
   color: var(--title-color);
   letter-spacing: -1px;
@@ -953,7 +953,7 @@ a {
 
 .facilities__text {
   font-family: var(--body-font);
-  font-size: 2.47rem;
+  font-size: 42px;
   line-height: 1.25em;
   font-weight: var(--font-medium);
   color: var(--title-color);
@@ -1095,7 +1095,7 @@ a {
 .title__text,
 .OffersTitle__text {
   font-family: var(--body-font);
-  font-size: 2.47rem;
+  font-size: 42px;
   font-weight: var(--font-medium);
   color: var(--title-color);
   letter-spacing: -1px;
@@ -1394,7 +1394,7 @@ a {
 
 .review__text {
   line-height: 1.25em;
-  font-size: 2.47rem;
+  font-size: 42px;
   color: var(--title-color);
   font-family: var(--body-font);
   font-weight: var(--font-medium);
@@ -1683,7 +1683,7 @@ a {
 .hotel__text,
 .gallery__text {
   line-height: 1.25em;
-  font-size: 2.47rem;
+  font-size: 42px;
   font-family: var(--body-font);
   font-weight: var(--font-medium);
   color: var(--title-color);
