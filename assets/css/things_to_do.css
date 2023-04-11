@@ -1,0 +1,305 @@
+/*========= Google Fonts =======*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Work+Sans:wght@300&display=swap");
+
+/*======= VARIABLES CSS ========*/
+
+:root {
+  --header-height: 6rem;
+
+  /*======= COLORS ========*/
+
+  --first-color: #26a69a;
+  --first-color-lighter: #ecf3f2;
+  --title-color: #11443f;
+  --text-color: #586261;
+  --body-color: #faf4ed;
+
+  /*======= Font and Typography ========*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 5rem;
+  --sub-font-size: 0.882rem;
+  --normal-font-size: 1rem;
+  --big-font-size: 42px;
+
+  /*======= Font Weight ========*/
+  --font-medium: 500;
+  --font-semi-bold: 500;
+
+  /*======= z index ========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (max-width: 921px) {
+  :root {
+    --biggest-font-size: 4rem;
+    /* --sub-font-size: 0.88rem; */
+    --normal-font-size: 0.941rem;
+    --big-font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --sub-font-size: 0.823rem;
+    --normal-font-size: 0.882rem;
+    --big-font-size: 30px;
+  }
+}
+
+/*======= BASE ========*/
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.85714285714286;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  line-height: 1.6;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=======================stays =====================*/
+
+.explore {
+  padding: 104px 40px;
+}
+.explore__container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.explore__heading,
+.explore__title {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.explore__description {
+  text-align: center;
+
+  width: 100%;
+}
+.explore__title__wrapper {
+  padding: 0% 15%;
+}
+.explore__description__wrapper {
+  padding: 0% 20%;
+}
+.explore__description__text {
+  font-size: var(--normal-font-size);
+}
+
+.explore__heading__text,
+.exploePlace__count__text {
+  color: var(--first-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.25em;
+  font-weight: var(--font-medium);
+  font-size: 15px;
+  font-family: var(--body-font);
+}
+
+.explore__title__text {
+  font-family: var(--body-font);
+  font-size: var(--big-font-size);
+  line-height: 1.25em;
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  text-align: center;
+}
+.explorePlaces {
+  margin-top: 80px;
+  margin-bottom: 0;
+  width: 100%;
+}
+.explorePlaces__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.explorePlace__img__container {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.explorePlace__content__container {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.explorePage__rightPad-0 {
+  padding: 0 24px 0 0;
+}
+.explorePage__leftPad-1 {
+  padding: 0 0 0 24px;
+}
+
+.explorePage__leftPad-0 {
+  padding: 0 48px 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+.explorePage__rightPad-1 {
+  padding: 0 24px 0 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+/* .explorePlace__content__wrapper {
+  padding: 0 24px 0 24px;
+} */
+
+.explorePlace__img {
+  border-radius: 8px;
+  vertical-align: middle;
+  display: inline-block;
+  height: auto;
+  width: 600px;
+  max-width: 100%;
+}
+
+.explorePlace__count,
+.explorePlace__title,
+.explorePlace__description {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.exploePlace__title__text {
+  line-height: 1.2em;
+  color: var(--title-color);
+  font-size: 32px;
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+}
+.exploePlace__description__text {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1em;
+}
+.explorePlace__buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: flex-end;
+}
+
+.explorePlace__button {
+  display: inline-block;
+
+  padding: 15px 23px;
+  border: solid 1px var(--first-color);
+  color: var(--first-color);
+  border-radius: 6px;
+  font-weight: var(--font-medium);
+  font-size: 1rem;
+  line-height: 1em;
+}
+
+.explorePlace__icon {
+  margin-right: 16px;
+}
+.explorePlace__button:hover {
+  /* background-color: transparent; */
+
+  color: var(--first-color-lighter);
+  background-color: var(--first-color);
+}
+@media screen and (max-width: 1024px) {
+  .explore__title__wrapper {
+    padding: 0 24px;
+  }
+  .explore__description__wrapper {
+    padding: 0;
+  }
+  .explorePage__leftPad-0,
+  .explorePage__rightPad-1 {
+    padding: 0 0 0 24px;
+  }
+  .explorePage__rightPad-0,
+  .explorePage__leftPad-1 {
+    padding: 0 24px 0 0;
+  }
+  .row_reverse__right {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (max-width: 921px) {
+  .exploePlace__title__text {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .explore {
+    padding: 64px 24px;
+  }
+
+  .explorePlace__img__container {
+    justify-content: center;
+  }
+  .explorePlace__img__container,
+  .explorePlace__content__container {
+    width: 100%;
+  }
+  .explorePage__rightPad-0,
+  .explorePage__rightPad-1 {
+    padding: 0 0 24px;
+  }
+
+  .explorePage__leftPad-0,
+  .explorePage__leftPad-1 {
+    padding: 0 0 24px;
+  }
+  .row_reverse__right {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .exploePlace__title__text {
+    font-size: 24px;
+  }
+  .explorePlace__button {
+    padding: 13px 21px;
+  }
+}

@@ -313,6 +313,120 @@ const displayImage = function (data) {
 
 displayImage(imageData.slice(0, 3));
 displayImage(imageData.slice(3));
+/*============================== Things to do ===================*/
+
+const explore_places = [
+  {
+    name: "Hidimba Devi Temple",
+    description:
+      "Augue sapien in urna cras placerat diam risus tincidunt condimentum vestibulum tellus sed nunc turpis dignissim nec sagittis, phasellus tellus nam nibh cursus donec quam mi sem ullamcorper diam hendrerit tortor, sed faucibus tristique convallis urna, molestie purus tellus id amet, enim sit phasellus dui integer eros ullamcorper.",
+  },
+  {
+    name: "Mall Road",
+    description:
+      "Pulvinar venenatis parturient vulputate sit faucibus semper erat ac nulla egestas mi suspendisse aliquam mattis sagittis fermentum euismod tellus feugiat duis ac lacus mauris a id sed ipsum dolor a scelerisque lobortis cursus tincidunt maecenas tellus amet porttitor tincidunt convallis neque massa sapien montes mollis massa.",
+  },
+  {
+    name: "Rohtang Pass",
+    description:
+      "Malesuada ut sagittis, consectetur morbi volutpat sit quam ipsum, nisi arcu, velit amet facilisis cursus eu curabitur tempor, quis pellentesque pellentesque volutpat leo eu ultrices nibh sit pharetra arcu, tempus nibh in interdum ac fermentum cursus amet leo, adipiscing vitae at dolor viverra consectetur quis dignissim.",
+  },
+  {
+    name: "Old Manali",
+    description:
+      "Dui sodales aliquam amet velit non amet mi diam pulvinar in tortor augue sit porta purus orci nisl semper tellus enim lobortis a, sed cras cras pellentesque aliquet a ultrices sollicitudin et sed feugiat dapibus phasellus tincidunt ullamcorper neque tincidunt urna id donec id ut sed risus nunc.",
+  },
+  {
+    name: "Jogini Waterfalls",
+    description:
+      "Tortor duis sit volutpat, et scelerisque et felis proin erat tellus ac at et egestas duis urna risus odio blandit duis molestie cursus ipsum metus, eget urna mattis dictumst cras felis facilisis vel lectus aenean gravida augue blandit rhoncus ipsum, id rutrum ultrices nulla pellentesque vitae, eget orci.",
+  },
+  {
+    name: "Hampta Pass",
+    description:
+      "Augue odio felis neque, non tortor nisi etiam bibendum duis enim, proin justo, montes, etiam sit vitae at sit pretium sed ut diam, id aliquam pulvinar tristique sit pharetra, in sagittis, non suspendisse pulvinar tortor porttitor ipsum, tempus tincidunt mi faucibus sed nibh nisi sed amet in gravida.",
+  },
+];
+
+const displayExplorePlaces = function (cardName) {
+  const placesContainer = document.querySelector(".explore__container");
+  let text;
+
+  cardName.forEach((el, i) => {
+    const count = i + 1;
+    text =
+      count % 2 !== 0
+        ? `<div class="explorePlaces__container row_reverse__left">
+        <div class="explorePlace__img__container">
+    <div class="explorePlace__img__wrapper explorePage__rightPad-0">
+      <img src="/assets/img/explore/img-${i}.jpg" alt="img-${i}" class="explorePlace__img">
+    </div>
+  </div>
+  <div class="explorePlace__content__container">
+    <div class="explorePlace__content__wrapper explorePage__leftPad-0">
+      <div class="explorePlace__count">
+        <div class="explorePlace__count__wrap">
+          <h6 class="exploePlace__count__text">0${count}.</h6>
+        </div>
+      </div>
+      <div class="explorePlace__title">
+        <div class="explorePlace__title__wrap">
+          <h2 class="exploePlace__title__text">${el.name}</h2>
+        </div>
+      </div>
+      <div class="explorePlace__description">
+        <div class="explorePlace__description__wrap">
+          <p class="exploePlace__description__text">${el.description}</p>
+        </div>
+      </div>
+      <div class="explorePlace__buttonContainer"><a href="#" class="explorePlace__button">Get Directions</a></div>
+    </div>
+    </div>
+    </div>
+      `
+        : `<div class="explorePlaces__container row_reverse__right">
+        <div class="explorePlace__content__container">
+      <div class="explorePlace__content__wrapper explorePage__rightPad-1">
+        <div class="explorePlace__count">
+          <div class="explorePlace__count__wrap">
+            <h6 class="exploePlace__count__text">0${count}.</h6>
+          </div>
+        </div>
+        <div class="explorePlace__title">
+          <div class="explorePlace__title__wrap">
+            <h2 class="exploePlace__title__text">${el.name}</h2>
+          </div>
+        </div>
+        <div class="explorePlace__description">
+          <div class="explorePlace__description__wrap">
+            <p class="exploePlace__description__text">${el.description}</p>
+          </div>
+        </div>
+        <div class="explorePlace__buttonContainer"><a href="#" class="explorePlace__button">Get Directions</a></div>
+        </div>
+        </div>
+        <div class="explorePlace__img__container">
+    <div class="explorePlace__img__wrapper explorePage__leftPad-1">
+      <img src="/assets/img/explore/img-${i}.jpg" alt="img-${i}" class="explorePlace__img">
+      </div>
+    </div>
+    </div>
+  
+        `;
+
+    const html = `
+    <section class="explorePlaces">
+    
+          ${text}
+          
+       
+    
+  </section>`;
+    if (placesContainer) placesContainer.insertAdjacentHTML("beforeend", html);
+  });
+};
+
+displayExplorePlaces(explore_places);
 /*============================== Facilities page containers===================*/
 
 const facilities_content = [
