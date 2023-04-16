@@ -68,34 +68,40 @@ const places_title_1 = [
   {
     name: "Hidimba Devi Temple",
     description:
-      "Ornare accumsan congue nunc id facilisis tincidunt ridiculus congue consequat ultrices in mollis netus pellentesque lectus.",
+      "The Hadimba Devi Temple is a unique temple located in Manali, nestled in the snow-covered hills of the Himalayas. It is dedicated to Hidimba Devi, the protector of the dense forest, and is a popular destination among families and honeymoon travellers.",
+    id: "place-0",
   },
   {
     name: "Mall Road",
     description:
-      "Augue donec sit vestibulum amet luctus cras sagittis, ac rutrum tincidunt accumsan at posuere urna.",
+      "Located in the beautiful state of Himachal Pradesh, Manali is a picturesque hill station that offers stunning views of snow-capped mountains. One of the most popular places in Manali is Mall Road, where visitors from all over the world come not only to admire the breathtaking scenery but also to shop.",
+    id: "place-1",
   },
   {
-    name: "Rohtang Pass",
+    name: "Solang Valley",
     description:
-      "Suspendisse at sodales morbi urna, ut diam dignissim ante tellus vitae venenatis maecenas nullam pretium mattis.",
+      "Solang Valley, located in Manali, is an exquisite destination that offers a unique blend of adventure and natural beauty. Apart from being a popular skiing paradise, this valley offers a plethora of experiences that cater to both thrill-seekers and nature lovers alike.",
+    id: "place-2",
   },
 ];
 const places_title_2 = [
   {
     name: "Old Manali",
     description:
-      "Placerat vel laoreet purus, mattis id neque convallis nunc, tincidunt massa at.",
+      "Old Manali is a peaceful settlement nestled in the Beas River Valley of Himachal Pradesh, situated 3 kilometres uphill from the busy town of Manali. At an altitude of around 6,589 feet above sea level, this quaint little village is a haven for backpackers and hippies, who prefer a laid-back and relaxed environment away from the hustle and bustle of the city.",
+    id: "place-3",
   },
   {
     name: "Jogini Waterfalls",
     description:
-      "Risus facilisis porttitor lacus venenatis felis scelerisque lorem ut cras mi venenatis viverra diam sed dui.",
+      "The Jogini Waterfall, a stunning 160-foot cascade located near Vashisht village in Manali. It's named after the village goddess, Jogini, who is said to reside in the waters of this waterfall. The area, river, and forest around the falls are seen as sacred due to its historical significance as a place where one of the Shakti Peethas fell, making it a place of Feminine Power.",
+    id: "place-4",
   },
   {
-    name: "Hampta Pass",
+    name: "Nehru Kund",
     description:
-      "Neque ut et velit dictum molestie at pellentesque aliquet magna ut tincidunt ullamcorper mauris mi et.",
+      "An oasis of greenery and fresh air lies around half a kilometer away from Mall Road, known as the Nature Park in Manali. The park is a perfect destination for nature lovers as it is filled with Deodar trees and is home to some of the rare birds of Himachal state.",
+    id: "place-5",
   },
 ];
 
@@ -117,7 +123,9 @@ const displaySection = function (cardName, f_name) {
     <p class="${f_name}__descriptionText">${el.description}</p>
   </div>
   <div class="${f_name}__button">
-    <a href="#" class="${f_name}__link">${text} <span class="arrow-right"
+    <a href="things_to_do.html#${
+      el.id
+    }" class="${f_name}__link">${text} <span class="arrow-right"
     ><i class="fa-solid fa-arrow-right-long"></i
   ></span></a>
   </div>
@@ -318,33 +326,109 @@ displayImage(imageData.slice(3));
 const explore_places = [
   {
     name: "Hidimba Devi Temple",
-    description:
-      "Augue sapien in urna cras placerat diam risus tincidunt condimentum vestibulum tellus sed nunc turpis dignissim nec sagittis, phasellus tellus nam nibh cursus donec quam mi sem ullamcorper diam hendrerit tortor, sed faucibus tristique convallis urna, molestie purus tellus id amet, enim sit phasellus dui integer eros ullamcorper.",
+    description: `The Hadimba Devi Temple is a unique temple located in Manali, nestled in the snow-covered hills of the Himalayas. It is dedicated to Hidimba Devi, the protector of the dense forest, and is a popular destination among families and honeymoon travellers. The temple's architecture is entirely different from any other temple in Manali, and it is believed to have been named after the ferocious demon Hadimba who ruled the surrounding area. The temple has no physical idol of Hadimba Devi, but worshippers offer their prayers to her footprints in the temple.<br><br>
+    The temple is built mainly of wood and stone, and its doors are intricately carved. The interiors are decorated with carvings of Hindu gods, goddesses, and various animals. The temple is a significant historical site and is considered one of the iconic places to visit in Manali. The deity, considered an avatar of Goddess Durga, is worshipped by the locals, who seek her blessings before any special occasion.<br><br> 
+    Visitors can relish delicious local food during the festival month at the temple, and the temple gates are open every day from 8 AM to 6 PM. A trip to Manali is incomplete without a visit to this breathtaking temple in the Himalayas, and after visiting the temple, travellers can walk down to Mall road, which boasts fine dine-in restaurants, cafes, and handicraft shops.`,
   },
   {
     name: "Mall Road",
-    description:
-      "Pulvinar venenatis parturient vulputate sit faucibus semper erat ac nulla egestas mi suspendisse aliquam mattis sagittis fermentum euismod tellus feugiat duis ac lacus mauris a id sed ipsum dolor a scelerisque lobortis cursus tincidunt maecenas tellus amet porttitor tincidunt convallis neque massa sapien montes mollis massa.",
+    description: `Located in the beautiful state of Himachal Pradesh, Manali is a picturesque hill station that offers stunning views of snow-capped mountains. One of the most popular places in Manali is Mall Road, where visitors from all over the world come not only to admire the breathtaking scenery but also to shop. It is a renowned shopping destination with numerous shops and emporiums selling various items such as shawls, rugs, jewelry, woolen caps, wooden furniture, and books.<br><br>
+
+    Mall Road is often referred to as the heart of Manali and is a bustling street with plenty of activity throughout the day. Visitors can find a range of accommodations, restaurants, and bars along the street. There are also several small shopping areas like the Dragon Shopping Complex, Lama Underground, Hong Kong Market, Shangri La Shopping Complex, Thai Market, Snow Lion Underground Market, and New NAC Market.
+      
+    Mall Road is a no-vehicle zone, except for emergency vehicles, and is home to the police headquarters, Municipal Corporation, and fire service offices. The street is perfect for strolling and exploring, and visitors can take a break and relax in one of the many areas along the road.<br><br>
+      
+    In addition to shopping, dining, and sightseeing, visitors can also visit the temple dedicated to goddess Durga, located next to the Bus depot on Mall Road. The temple is a great place to offer prayers and seek blessings. Visitors can also witness the colorful and traditional Durga Puja Visarjans performed from the Hills of Manali during the peak summer season.<br><br>
+      
+    Overall, Mall Road is a perfect place to begin exploring the beautiful town of Manali, and visitors can indulge in the three main things that Manali has to offer: sleep, eat, and shop. Himachal emporium on Mall Road is a great place to purchase some of the best handcrafted products of Himachal Pradesh, such as woolen clothes, pottery products, branded clothes, wood items, and ornaments.`,
   },
   {
-    name: "Rohtang Pass",
-    description:
-      "Malesuada ut sagittis, consectetur morbi volutpat sit quam ipsum, nisi arcu, velit amet facilisis cursus eu curabitur tempor, quis pellentesque pellentesque volutpat leo eu ultrices nibh sit pharetra arcu, tempus nibh in interdum ac fermentum cursus amet leo, adipiscing vitae at dolor viverra consectetur quis dignissim.",
+    name: "Solang Valley",
+    description: `Solang Valley, located in Manali, is an exquisite destination that offers a unique blend of adventure and natural beauty. Apart from being a popular skiing paradise, this valley offers a plethora of experiences that cater to both thrill-seekers and nature lovers alike. The valley derives its name from the combination of Solang, meaning 'nearby village,' and Nullah, meaning 'current of water'.<br><br>
+
+      The Solang Valley is renowned for its scenic charm, especially during the winter months when it is draped in snow. The sight of snow-capped mountains and the frozen Beas river is breathtaking and awe-inspiring.<br><br>
+      
+      One can engage in a variety of exciting activities in Solang Valley, including paragliding and zorbing, which are thrilling experiences that offer spectacular views of the valley. Skiing is a popular activity in the valley, with skiing courses available for individuals of all skill levels. Camping is another fantastic way to immerse oneself in nature and enjoy the starry nights surrounded by the serene beauty of the valley. Trekking is also an option for those looking to explore the nearby areas and soak in the natural wonders of the region.<br><br>
+      
+      The valley is conveniently accessible by road and is located just 14 km from Manali. The best time to visit Solang Valley is during the summer months of May to June or in the winter months of December to February.<br><br>
+      
+      All in all, Solang Valley is a must-visit destination for adventure enthusiasts and nature lovers alike. The picturesque views, coupled with thrilling activities, promise a memorable experience that will last a lifetime.`,
   },
   {
     name: "Old Manali",
-    description:
-      "Dui sodales aliquam amet velit non amet mi diam pulvinar in tortor augue sit porta purus orci nisl semper tellus enim lobortis a, sed cras cras pellentesque aliquet a ultrices sollicitudin et sed feugiat dapibus phasellus tincidunt ullamcorper neque tincidunt urna id donec id ut sed risus nunc.",
+    description: `Old Manali is a peaceful settlement nestled in the Beas River Valley of Himachal Pradesh, situated 3 kilometres uphill from the busy town of Manali. At an altitude of around 6,589 feet above sea level, this quaint little village is a haven for backpackers and hippies, who prefer a laid-back and relaxed environment away from the hustle and bustle of the city.<br><br>
+
+    To reach Old Manali from New Manali, you can take a 20-minute uphill walk or hire an auto-rickshaw, though the latter may be congested and best avoided. Unlike New Manali, Old Manali is less crowded and offers plenty of foreign backpackers and travelers who stay for weeks or even months. There are numerous backpacker cafes and restaurants, serving delicious food like chocolate cookies, chicken tuna pizza, and chicken burger.<br><br>
+      
+    After sundown, Old Manali has an unexplainable vibe that must be experienced firsthand. Many restaurants offer live music and karaoke nights that attract both Indian and foreign crowds. Affordable guest houses in Old Manali are also a significant reason why many foreign tourists stay here. These guest houses are very basic, offering just a bed and a fan, and some don't even have fans as the weather is pleasant throughout the year. Common washrooms are the norm.<br><br>
+      
+    Old Manali is famous for Manali cream, a type of hash sold on the down-low. While it is common to be offered it by a random local as you wander through the lanes, note that marijuana is a banned substance in the country, and possession can lead to imprisonment.<br><br>
+      
+    One of the main attractions in Old Manali is the Hadimba Temple, dedicated to Goddess Hadimba, located around a kilometre from the market area. You can buy locally grown cherries outside the temple complex at an affordable price. Junkie lovers will find paradise in Old Manali, with shops selling funky sweatshirts, colorful pants, chillums, bongs, hand-painted T-shirts, summer dresses, and woolen wear like mufflers with animal faces (pandas, tigers, and dogs).<br><br>
+      
+    If you're looking for a laid-back and relaxed environment away from the busy town of Manali, Old Manali is worth the long uphill walk from New Manali. If you miss out on Old Manali, you will miss out on the best part of Manali.`,
   },
   {
     name: "Jogini Waterfalls",
-    description:
-      "Tortor duis sit volutpat, et scelerisque et felis proin erat tellus ac at et egestas duis urna risus odio blandit duis molestie cursus ipsum metus, eget urna mattis dictumst cras felis facilisis vel lectus aenean gravida augue blandit rhoncus ipsum, id rutrum ultrices nulla pellentesque vitae, eget orci.",
+    description: `The Jogini Waterfall, a stunning 160-foot cascade located near Vashisht village in Manali. It's named after the village goddess, Jogini, who is said to reside in the waters of this waterfall. The area, river, and forest around the falls are seen as sacred due to its historical significance as a place where one of the Shakti Peethas fell, making it a place of Feminine Power. So, it's important to respect the area surrounding it on your visit.<br><br>
+
+    The Jogini Falls trail is accessible by foot from New Manali, and it's a 4-kilometre trek to Vashisht village, where you can start the hike. However, if you want to save some energy, you can take a car or rickshaw to Vashisht temple and begin your hike from there.<br><br>
+      
+    The trail to the Jogini Falls is approximately 3 kilometres long and runs through a forested area. It's not a flat path and has some steep hills and steps in order to access it. If you start your trek from Vashisht, it will be a lot shorter at 3 kilometres one way, saving you an hour or so. The hike can take between 2-4 hours depending on various factors like weather conditions, stopping for chai, and how long you decide to stay at Jogini Falls.<br><br>
+      
+    It is recommended planning at least a half-day out of your Manali itinerary to complete this walk. It's not recommended to leave it too late in the afternoon as you don't want to be trekking in the dark.<br><br>
+      
+    In conclusion, the Jogini Waterfall is a beautiful destination that's worth the effort to visit. Just remember to be respectful of the area and plan accordingly for the hike.`,
   },
   {
-    name: "Hampta Pass",
+    name: "Nehru Kund",
     description:
-      "Augue odio felis neque, non tortor nisi etiam bibendum duis enim, proin justo, montes, etiam sit vitae at sit pretium sed ut diam, id aliquam pulvinar tristique sit pharetra, in sagittis, non suspendisse pulvinar tortor porttitor ipsum, tempus tincidunt mi faucibus sed nibh nisi sed amet in gravida.",
+      "An oasis of greenery and fresh air lies around half a kilometer away from Mall Road, known as the Nature Park in Manali. The park is a perfect destination for nature lovers as it is filled with Deodar trees and is home to some of the rare birds of Himachal state. The park includes a children's playing area that has swings, slides, and other park activities. Additionally, visitors can find a few places to sit and relax. A small pond with paddle boats available is accessible by walking about 100 meters from the edge of the park. The Nature Park in Manali is a popular destination, and visitors should expect crowds at times.",
+  },
+  {
+    name: "Buddhist Monastery",
+    description: `The Tibetan Monastery, located near the Mall in Manali, is one of the oldest and most popular sightseeing places in the area. With a large population of Tibetan settlers in Kullu & Manali, the monasteries were built to meet their religious needs. There are three important Tibetan Monasteries in Manali, including The Gadhan Thekchoking Gompa, Himalayan Nyingamapa Temple, and another in Aleo on the left bank of the Beas River.<br><br>
+
+      The Gadhan Thekchoking Gompa, constructed in 1969, is situated near the Mall and is run by locals who gather funds through donations. The monastery boasts of unique handicrafts of Tibetan artistry and carpets that are woven and sold on site. The architecture is typically Tibetan, with hued frescoes, and a statue of Lord Buddha presides over the monastery.<br><br>
+      
+      The Himalayan Nyingamapa Gompa, situated near the market place in Manali, has a more modern architecture than the previous one. It is surrounded by sunflowers and glows at night with light bulbs lit to illuminate it. The monastery also has a huge gold-faced bronze statue of Lord Buddha.<br><br>
+      
+      The Tibetan Monasteries have several small shops surrounding them that sell beautiful handicrafts and carpets made by Tibetan people living nearby. The Monasteries also run a Thanka School of Arts and a Carpet-weaving Center to preserve ancient Tibetan art. Inside the buildings, there are paintings depicting events from Lord Buddha's life and the Kalchakra, a wheel of life fixed on the wall of the monastery showing the human life cycle. The Buddhists believe that rotating these wheels gives one salvation.<br><br>
+      
+      The Tibetan Monasteries are open from 6 AM to 6 PM, and visitors are encouraged to visit and immerse themselves in the peaceful and spiritual atmosphere.`,
+  },
+  {
+    name: "Vashisht Temple and Hot Springs",
+    description: `Located 3.5 km from Manali Bus Stand, Vashist Temple is a renowned pilgrimage site in Manali, dedicated to sage Vashisht, the Kula guru of Lord Rama. The village of Vashisht, situated across the River Beas, was named after Rishi Vashisht, one of the seven sages of Hindu mythology. According to the legend, Rishi Vashisht was heartbroken to learn that his children had been killed by Vishwamitra and attempted suicide by jumping into a river. However, the river refused to harm him, and he began a new life in the village, which was later named after him. The Vipasha River, which carried the rishi to the village, is now known as the Beas River.<br><br>
+
+      The Vashisht temple, which is believed to be more than 4000 years old, houses a black stone image of the Rishi wearing a dhoti. It is adorned with exquisite wood carvings and traditional paintings and figures. The temple's interior is decorated with antique artwork, creating an enchanting atmosphere.<br><br>
+      
+      One of the most famous attractions of the region is the Vashisht Hot Water Spring, which is believed to have medicinal properties and is said to cure many skin diseases. Visitors flock to the Vashisht baths to take a dip and cleanse themselves of skin infections and ailments. Separate bathrooms for men and women are available for convenience.<br><br>
+      
+      Adjacent to the Vashisht Temple is another ancient stone temple, the Rama Temple, which houses idols of Rama, Sita, and Lakshmana. The village was once the center of the Vaishnava cult, and Dussehra is celebrated for seven days. Overall, Vashist Temple and its surrounding attractions are among the most popular places to visit in Manali.`,
+  },
+  {
+    name: "Nature Park",
+    description:
+      "An oasis of greenery and fresh air lies around half a kilometer away from Mall Road, known as the Nature Park in Manali. The park is a perfect destination for nature lovers as it is filled with Deodar trees and is home to some of the rare birds of Himachal state. The park includes a children's playing area that has swings, slides, and other park activities. Additionally, visitors can find a few places to sit and relax. A small pond with paddle boats available is accessible by walking about 100 meters from the edge of the park. The Nature Park in Manali is a popular destination, and visitors should expect crowds at times.",
+  },
+  {
+    name: "Manu Temple",
+    description: `Located in the Beas River Valley of Old Manali, the Manu Temple is a hidden gem off the beaten track. It is the only temple in India devoted to the ancient Indian law-giver, Manu Rishi, who is considered the creator of the human race and the author of the Manusmriti, the book that established the foundation of mankind. The name of the town, Manali, is derived from Manu Rishi, who is said to have meditated here.<br><br>
+
+      As you make your way through the slippery stone path, the sight of the temple will delight you. A large, rustic bell at the entrance sets the tone for the visit. The temple was reconstructed in 1992, with an added curved ceiling and marble floor, but it still retains its ancient charm with its wooden and stone structure. The nearby Beas River adds a mystical charm to the temple.<br><br>
+      
+      Inside the temple, the serene atmosphere is inviting for meditation and reflection. The spacious hall has wooden flooring, and worshippers sit on the floor to meditate for hours. The natural light from the windows, blue skies, and passing clouds provide a peaceful ambiance. This temple is a fascinating destination to explore in Manali, away from the usual tourist spots.`,
+  },
+  {
+    name: "Atal Tunnel",
+    description: `The Atal Tunnel is a magnificent feat of engineering located in Himachal Pradesh that has attracted a lot of visitors since its construction. This tunnel, built at a height of 10,040 feet above sea level, has broken the world record for being the longest highway tunnel in the world at that altitude, as recognized by the World Book of Records, London.<br><br>
+
+      The tunnel is a mesmerizing marvel of engineering nestled in the lap of the Himalayas. One of the most intriguing aspects of the Atal Tunnel is that it connects Manali with the Lahaul and Spiti district, making it possible for tourists to explore the remote regions of Himachal Pradesh and Ladakh that were previously inaccessible due to extreme weather conditions. It has now become one of the top tourist attractions in Himachal Pradesh.<br><br>
+      
+      Travelling through this scenic tunnel offers breathtaking views that will stay with you forever. From the lush green forests to the lofty Himalayan peaks of Dhauladhar, hanging glaciers, scenic Dhundi valley, blissful Chandra River, Sissu waterfall, and beautiful Keylong valley, there are countless nearby attractions to explore near Atal Tunnel.<br><br>
+      
+      Remember, it's not just about the destination, but also the journey. The trip to Atal Tunnel will expose you to many awe-inspiring tourist attractions, making your Atal Tunnel Tour a memorable one.`,
   },
 ];
 
@@ -353,11 +437,11 @@ const displayExplorePlaces = function (cardName) {
   let text;
 
   cardName.forEach((el, i) => {
-    const count = i + 1;
+    const count = String(i + 1).padStart(2, "0");
     text =
-      count % 2 !== 0
-        ? `<div class="explorePlaces__container row_reverse__left">
-        <div class="explorePlace__img__container">
+      +count % 2 !== 0
+        ? `<div class="explorePlaces__container row_reverse__left" >
+        <div class="explorePlace__img__container_left">
     <div class="explorePlace__img__wrapper explorePage__rightPad-0">
       <img src="/assets/img/explore/img-${i}.jpg" alt="img-${i}" class="explorePlace__img">
     </div>
@@ -366,7 +450,7 @@ const displayExplorePlaces = function (cardName) {
     <div class="explorePlace__content__wrapper explorePage__leftPad-0">
       <div class="explorePlace__count">
         <div class="explorePlace__count__wrap">
-          <h6 class="exploePlace__count__text">0${count}.</h6>
+          <h6 class="exploePlace__count__text">${count}.</h6>
         </div>
       </div>
       <div class="explorePlace__title">
@@ -376,7 +460,7 @@ const displayExplorePlaces = function (cardName) {
       </div>
       <div class="explorePlace__description">
         <div class="explorePlace__description__wrap">
-          <p class="exploePlace__description__text">${el.description}</p>
+          <p class="exploePlace__description__text" >${el.description}</p>
         </div>
       </div>
       <div class="explorePlace__buttonContainer"><a href="#" class="explorePlace__button">Get Directions</a></div>
@@ -385,11 +469,17 @@ const displayExplorePlaces = function (cardName) {
     </div>
       `
         : `<div class="explorePlaces__container row_reverse__right">
-        <div class="explorePlace__content__container">
+        
+        <div class="explorePlace__img__container_right">
+    <div class="explorePlace__img__wrapper explorePage__leftPad-1">
+      <img src="/assets/img/explore/img-${i}.jpg" alt="img-${i}" class="explorePlace__img">
+      </div>
+    </div>
+    <div class="explorePlace__content__container">
       <div class="explorePlace__content__wrapper explorePage__rightPad-1">
         <div class="explorePlace__count">
           <div class="explorePlace__count__wrap">
-            <h6 class="exploePlace__count__text">0${count}.</h6>
+            <h6 class="exploePlace__count__text">${count}.</h6>
           </div>
         </div>
         <div class="explorePlace__title">
@@ -405,17 +495,12 @@ const displayExplorePlaces = function (cardName) {
         <div class="explorePlace__buttonContainer"><a href="#" class="explorePlace__button">Get Directions</a></div>
         </div>
         </div>
-        <div class="explorePlace__img__container">
-    <div class="explorePlace__img__wrapper explorePage__leftPad-1">
-      <img src="/assets/img/explore/img-${i}.jpg" alt="img-${i}" class="explorePlace__img">
-      </div>
-    </div>
     </div>
   
         `;
 
     const html = `
-    <section class="explorePlaces">
+    <section class="explorePlaces" id=place-${i}>
     
           ${text}
           
